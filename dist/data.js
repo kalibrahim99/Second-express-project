@@ -1,13 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.books = void 0;
+exports.members = exports.books = void 0;
+// data of this poject
 exports.books = [
-    { id: 1, title: "1984", author: "George Orwell", genre: "Fiction" },
-    { id: 2, title: "A Brief History of Time", author: "Stephen Hawking", genre: "Science" },
-    { id: 3, title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", genre: "Non-Fiction" },
-    { id: 4, title: "The Great Gatsby", author: "F. Scott Fitzgerald", genre: "Fiction" },
-    { id: 5, title: "Thinking, Fast and Slow", author: "Daniel Kahneman", genre: "Non-Fiction" },
-    { id: 6, title: "The Origin of Species", author: "Charles Darwin", genre: "Science" },
-    { id: 7, title: "To Kill a Mockingbird", author: "Harper Lee", genre: "Fiction" },
-    { id: 8, title: "Cosmos", author: "Carl Sagan", genre: "Science" }
+    { id: 1, title: "Clean Code", author: "Robert C. Martin", isAvailable: true },
+    { id: 2, title: "The Pragmatic Programmer", author: "Andy Hunt", isAvailable: false },
+    { id: 3, title: "You Don't Know JS", author: "Kyle Simpson", isAvailable: true },
+    { id: 4, title: "Eloquent JavaScript", author: "Marijn Haverbeke", isAvailable: false },
+];
+exports.members = [
+    { id: 1, name: "Alice", borrowedBooks: [exports.books[1], exports.books[3]] },
+    { id: 2, name: "Bob", borrowedBooks: [] },
+    { id: 3, name: "Charlie", borrowedBooks: [exports.books[0]] },
 ];
