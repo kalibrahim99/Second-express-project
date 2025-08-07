@@ -1,10 +1,10 @@
 import {Router} from 'express';
-import membersRouter from './members.router';
-import booksRouter from "./books.router";
+import tasksRouter from './tasks.router';
+import projectsRouter from "./project.router";
 
 const mainRouter = Router();
 
-mainRouter.use("/members", membersRouter);
-mainRouter.use("/books", booksRouter);
+mainRouter.use("/tasks", tasksRouter);
+mainRouter.use("/projects", projectsRouter);
 
 export default mainRouter

@@ -1,9 +1,9 @@
 // nextId function
-let nextBookId : number = 4;
-export const getNextBookId = () : number => {
-     return nextBookId++;
+let nextProjectId : number = 4;
+export const getNextProjectId = () : number => {
+     return nextProjectId++;
 }
-let nextMemberId : number = 3;
-export const getNextMemberId = () : number => {
-     return nextMemberId++;
+let nextTasksId : number = 3;
+export const getNextTasksId = () : number => {
+     return nextTasksId++;
 }
