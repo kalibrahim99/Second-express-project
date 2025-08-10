@@ -1,16 +1,10 @@
 // types of variables
-export type OrderStatus = "Received" | "In Progress" | "Completed" | "Cancelled";
-// type of menu
-export interface IMenuItem {
+// type of event
+export interface IEvent {
   id : number,
-  name : string,
-  price : number,
-  category : "Appetizer" | "Main Course" | "Dessert"
+  title : string,
+  date : Date,
+  location : string,
+  attendees : string[]
 }
-// type of order
-export interface  IOrder {
-  id : number,
-  items : IMenuItem[],
-  totalPrice : number,
-  status : OrderStatus
-} 
+
