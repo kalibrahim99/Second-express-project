@@ -1,14 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getNextTasksId = exports.getNextProjectId = void 0;
+exports.getNextMenuItemId = exports.getNextOrderId = void 0;
+const data_1 = require("./data");
 // nextId function
-let nextProjectId = 4;
-const getNextProjectId = () => {
-    return nextProjectId++;
+let nextOrderId = data_1.orders.length;
+const getNextOrderId = () => {
+    return nextOrderId++;
 };
-exports.getNextProjectId = getNextProjectId;
-let nextTasksId = 3;
-const getNextTasksId = () => {
-    return nextTasksId++;
+exports.getNextOrderId = getNextOrderId;
+let nextMenuItemsId = data_1.menuItems.length;
+const getNextMenuItemId = () => {
+    return nextMenuItemsId++;
 };
-exports.getNextTasksId = getNextTasksId;
+exports.getNextMenuItemId = getNextMenuItemId;

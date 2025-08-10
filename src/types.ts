@@ -1,20 +1,16 @@
 // types of variables
-export type TaskStatus  = "Pending" | "In Progress" | "Completed";
-export enum TasksStatusCompare  {
-  PENDING = "Pending",
-  IN_PROGRESS = "In Progress",
-  COMPLETED = "Completed"
-}
-// type of tasks
-export interface ITask {
-  id : number,
-  title : string,
-  status : TaskStatus,
-  projectId : number
-}
-// type of project
-export interface  IProject {
+export type OrderStatus = "Received" | "In Progress" | "Completed" | "Cancelled";
+// type of menu
+export interface IMenuItem {
   id : number,
   name : string,
-  description : string
+  price : number,
+  category : "Appetizer" | "Main Course" | "Dessert"
+}
+// type of order
+export interface  IOrder {
+  id : number,
+  items : IMenuItem[],
+  totalPrice : number,
+  status : OrderStatus
 } 

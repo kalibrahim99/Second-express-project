@@ -1,9 +1,11 @@
+import {orders, menuItems} from './data';
+import {IOrder, IMenuItem} from './types'
 // nextId function
-let nextProjectId : number = 4;
-export const getNextProjectId = () : number => {
-     return nextProjectId++;
+let nextOrderId : number = orders.length;
+export const getNextOrderId = () : number => {
+     return nextOrderId++;
 }
-let nextTasksId : number = 3;
-export const getNextTasksId = () : number => {
-     return nextTasksId++;
+let nextMenuItemsId : number = menuItems.length;
+export const getNextMenuItemId = () : number => {
+     return nextMenuItemsId++;
 }

@@ -1,10 +1,10 @@
 import {Router} from 'express';
-import tasksRouter from './tasks.router';
+import menuItemsRouter from './menu.router';
 import projectsRouter from "./project.router";
 
 const mainRouter = Router();
 
-mainRouter.use("/tasks", tasksRouter);
+mainRouter.use("/menuItems", menuItemsRouter);
 mainRouter.use("/projects", projectsRouter);
 
-export default mainRouter
+export default mainRouter;

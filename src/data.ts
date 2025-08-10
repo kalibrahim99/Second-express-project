@@ -1,84 +1,22 @@
-import {ITask, IProject} from "./types";
+import {IOrder, IMenuItem} from "./types";
 // data of this poject
-export let projects: IProject[] = [
-  {
-    id: 1,
-    name: "Website Redesign",
-    description: "Redesign the company website for improved UX and performance."
-  },
-  {
-    id: 2,
-    name: "Mobile App Launch",
-    description: "Develop and launch the new mobile application for iOS and Android."
-  },
-  {
-    id: 3,
-    name: "Marketing Campaign",
-    description: "Plan and execute a social media marketing campaign for product X."
-  }
+// Menu items
+export let menuItems: IMenuItem[] = [
+  { id: 1, name: "Bruschetta", price: 5.5, category: "Appetizer" },
+  { id: 2, name: "Caesar Salad", price: 6.0, category: "Appetizer" },
+  { id: 3, name: "Grilled Chicken", price: 12.0, category: "Main Course" },
+  { id: 4, name: "Spaghetti Bolognese", price: 11.5, category: "Main Course" },
+  { id: 5, name: "Cheesecake", price: 4.5, category: "Dessert" },
+  { id: 6, name: "Chocolate Lava Cake", price: 5.0, category: "Dessert" }
 ];
 
-export let tasks: ITask[] = [
-  // Tasks for Project 1
-  {
-    id: 1,
-    title: "Create wireframes",
-    status: "Pending",
-    projectId: 1
-  },
-  {
-    id: 2,
-    title: "Implement responsive layout",
-    status: "In Progress",
-    projectId: 1
-  },
-  {
-    id: 3,
-    title: "Conduct usability testing",
-    status: "Completed",
-    projectId: 1
-  },
-  
-  // Tasks for Project 2
-  {
-    id: 4,
-    title: "Design UI mockups",
-    status: "Pending",
-    projectId: 2
-  },
-  {
-    id: 5,
-    title: "Set up backend API",
-    status: "In Progress",
-    projectId: 2
-  },
-  {
-    id: 6,
-    title: "Submit to app stores",
-    status: "Pending",
-    projectId: 2
-  },
-  
-  // Tasks for Project 3
-  {
-    id: 7,
-    title: "Define target audience",
-    status: "Completed",
-    projectId: 3
-  },
-  {
-    id: 8,
-    title: "Create ad creatives",
-    status: "In Progress",
-    projectId: 3
-  },
-  {
-    id: 9,
-    title: "Launch Facebook ads",
-    status: "Pending",
-    projectId: 3
-  }
+// Orders
+export let orders: IOrder[] = [
+  { id: 1, items: [menuItems[0], menuItems[2]], totalPrice: 5.5 + 12.0, status: "Received" },
+  { id: 2, items: [menuItems[1], menuItems[4]], totalPrice: 6.0 + 4.5, status: "In Progress" },
+  { id: 3, items: [menuItems[3]], totalPrice: 11.5, status: "Completed" },
+  { id: 4, items: [menuItems[5], menuItems[0]], totalPrice: 5.0 + 5.5, status: "Cancelled" },
+  { id: 5, items: [menuItems[2], menuItems[3], menuItems[5]], totalPrice: 12.0 + 11.5 + 5.0, status: "In Progress" },
+  { id: 6, items: [menuItems[1], menuItems[4], menuItems[0]], totalPrice: 6.0 + 4.5 + 5.5, status: "Received" }
 ];
-
-
 
