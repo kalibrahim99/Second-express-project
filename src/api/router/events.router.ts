@@ -96,14 +96,14 @@ eventsRouter.post("/:id/attendees", (req, res) => {
     if (idUserChoiceAttendees === -1 ) {
         return res.status(404).json(`bad Request`);
     }
-    const names = req.body;
+    const {names} = req.body;
 
     if (!names || !Array.isArray(names)) {
         return res.status(400).json(`bad Request`)
     }
 
     events[idUserChoiceAttendees].attendees.push(...names);
-    res.status(200).json({names});
+    res.status(200).json(events[idUserChoiceAttendees]);
 })
 
 
